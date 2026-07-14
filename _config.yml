@@ -1,5 +1,25 @@
 title: Claude Code Skills
 description: CLAUDE.md templates, frontend skill catalog, and rollout playbook for AI-enabled dev teams
 theme: jekyll-theme-cayman
+baseurl: "/claude-code-skills"
+
 include:
   - .claude
+
+plugins:
+  - jekyll-relative-links
+  - jekyll-readme-index
+  - jekyll-optional-front-matter
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+
+# Skill/code files contain {{ }} snippets (antd ConfigProvider, i18n
+# interpolation) that must never be parsed as Liquid templates.
+defaults:
+  - scope:
+      path: ""
+    values:
+      render_with_liquid: false
+
+relative_links:
+  enabled: true
