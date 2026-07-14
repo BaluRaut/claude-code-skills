@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code Team Plan — 12 Devs on Max</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a2e;
+    --muted: #5c6370;
+    --accent: #c15f3c;
+    --accent-soft: #fdf1ec;
+    --border: #e4e4e7;
+    --card: #fafafa;
+    --code-bg: #f4f4f5;
+    --warn-bg: #fff8e6;
+    --warn-border: #e6c460;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16161e;
+      --fg: #e6e6ea;
+      --muted: #9ca3af;
+      --accent: #e8845c;
+      --accent-soft: #2a2119;
+      --border: #2e2e3a;
+      --card: #1e1e28;
+      --code-bg: #26262f;
+      --warn-bg: #2b2515;
+      --warn-border: #8a7430;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.65;
+    padding: 2rem 1rem 4rem;
+  }
+  .container { max-width: 860px; margin: 0 auto; }
+  header { margin-bottom: 2.5rem; border-bottom: 3px solid var(--accent); padding-bottom: 1.5rem; }
+  h1 { font-size: 1.9rem; line-height: 1.25; margin-bottom: .5rem; }
+  .subtitle { color: var(--muted); font-size: 1.05rem; }
+  .meta { margin-top: .75rem; display: flex; gap: .5rem; flex-wrap: wrap; }
+  .tag {
+    display: inline-block; font-size: .78rem; font-weight: 600;
+    background: var(--accent-soft); color: var(--accent);
+    padding: .2rem .65rem; border-radius: 999px;
+  }
+  h2 {
+    font-size: 1.35rem; margin: 2.5rem 0 1rem;
+    display: flex; align-items: center; gap: .6rem;
+  }
+  h2 .num {
+    flex-shrink: 0; width: 2rem; height: 2rem; border-radius: 50%;
+    background: var(--accent); color: #fff; font-size: .95rem;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  h3 { font-size: 1.05rem; margin: 1.4rem 0 .5rem; }
+  p { margin-bottom: .9rem; }
+  ul, ol { margin: 0 0 1rem 1.4rem; }
+  li { margin-bottom: .55rem; }
+  code {
+    font-family: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+    font-size: .86em; background: var(--code-bg);
+    padding: .12em .4em; border-radius: 4px;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 1.25rem 1.4rem; margin-bottom: 1rem;
+  }
+  .warn {
+    background: var(--warn-bg); border: 1px solid var(--warn-border);
+    border-radius: 10px; padding: 1.25rem 1.4rem; margin: 1rem 0 1.5rem;
+  }
+  .warn strong:first-child { display: block; margin-bottom: .4rem; }
+  table {
+    width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: .93rem;
+  }
+  .table-wrap { overflow-x: auto; }
+  th, td { text-align: left; padding: .6rem .8rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+  .kicker { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-bottom: .25rem; }
+  footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: .88rem; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>Claude Code Team Plan</h1>
+  <p class="subtitle">Productivity setup for a 12-developer team — React/nx frontends, Node serverless backends, individual Max plans.</p>
+  <div class="meta">
+    <span class="tag">12 devs · Max plan each</span>
+    <span class="tag">4–5 React apps (pnpm, nx)</span>
+    <span class="tag">3–5 Node serverless services</span>
+    <span class="tag">July 2026</span>
+  </div>
+</header>
+
+<div class="warn">
+  <strong>⚠️ The one billing fact to get right first</strong>
+  Max plans are <strong>per-person and interactive</strong> — each dev's limits (5-hour rolling windows + weekly caps) are their own. That's perfect for daily dev work. But <strong>automated CI usage (auto PR-review bots) should not run on someone's personal Max token</strong> — it silently drains that one person's quota. If you ever add unattended automation, put it on a small dedicated Anthropic API key with a monthly spend cap. Everything interactive — including locally-run PR reviews — stays on the Max plans.
+</div>
+
+<h2><span class="num">1</span> Foundation in every repo <span class="tag">Week 1</span></h2>
+<p>Do this in each of the ~8–10 repos, and <strong>check it all into git</strong> so all 12 devs get it automatically:</p>
+<div class="card">
+  <h3>CLAUDE.md</h3>
+  <p>Run <code>/init</code> in each repo, then hand-curate to ~100 lines: build/test/lint commands, architecture in 5 bullets, conventions ("we use React Query, never raw fetch", "serverless handlers live in <code>src/handlers</code>, one file per function").</p>
+  <p>For the nx monorepo: a root CLAUDE.md plus small per-app CLAUDE.md files in <code>apps/*</code> — Claude picks up nested ones when working in those directories.</p>
+</div>
+<div class="card">
+  <h3>.claude/settings.json (checked in)</h3>
+  <p>A shared permissions allowlist so nobody gets prompted for <code>pnpm test</code>, <code>pnpm lint</code>, <code>nx affected</code>, etc. After a week of real use, run <code>/fewer-permission-prompts</code> in each repo — it scans actual transcripts and generates the allowlist for you.</p>
+</div>
+<div class="card">
+  <h3>One CLAUDE.md owner per repo</h3>
+  <p>When Claude repeatedly does something wrong, the fix goes in CLAUDE.md — not in everyone's individual prompts.</p>
+</div>
+
+<h2><span class="num">2</span> Skills, shared the right way <span class="tag">Week 1–2</span></h2>
+<p>Yes, add skills — but don't copy-paste them into every repo. Use two layers:</p>
+<div class="card">
+  <h3>Repo-specific skills — <code>.claude/skills/</code> in that repo</h3>
+  <ul>
+    <li><code>new-component</code> — scaffolds with your design system + tests + Storybook</li>
+    <li><code>new-endpoint</code> — handler + validation + IaC entry</li>
+    <li><code>add-nx-lib</code>, <code>release</code></li>
+  </ul>
+  <p>Good skills encode <strong>multi-step processes people get wrong</strong>, not things Claude already knows.</p>
+</div>
+<div class="card">
+  <h3>Org-wide skills — one internal plugin repo</h3>
+  <p>Create a git repo that acts as a private plugin marketplace. Each dev adds it once (<code>/plugin marketplace add your-org/claude-plugins</code>) and gets shared skills, commands, and agents everywhere. Update centrally; everyone pulls the update.</p>
+  <p>This is the piece that scales to 12 people — otherwise skills drift across repos.</p>
+</div>
+<p><strong>Start with 3–4 skills</strong> mapping to your most repetitive work. Resist writing 20 speculative ones — unused skills are just noise in context.</p>
+
+<h2><span class="num">3</span> PR review <span class="tag">Week 2</span></h2>
+<div class="card">
+  <h3>Local, before push</h3>
+  <p>Make <code>/code-review</code> the norm before opening a PR. It uses the dev's own Max plan, catches bugs when they're cheapest to fix, and reduces reviewer load. Use <code>/security-review</code> for auth/payment/infra-touching changes.</p>
+</div>
+<div class="card">
+  <h3>On the PR — via local <code>gh</code> token (no GitHub Action needed)</h3>
+  <p><code>claude-code-action</code> is restricted in our org, so we skip it entirely. Claude Code uses the <code>gh</code> CLI: once authenticated (<code>gh auth login</code> or <code>GH_TOKEN</code>), <code>/code-review &lt;PR#&gt; --comment</code> reviews the PR and <strong>posts findings as inline comments directly on the pull request</strong>.</p>
+  <ul>
+    <li><strong>Workflow:</strong> the author runs it before requesting review, or the assigned reviewer runs it as their first pass.</li>
+    <li><strong>Token:</strong> each dev uses their own <code>gh auth</code> (comments appear under their account). For a bot identity, create a machine user with a fine-grained PAT: <em>Pull requests: Read &amp; write</em> + <em>Contents: Read</em>.</li>
+    <li><strong>Billing:</strong> runs on the dev's own Max plan — no dedicated CI API key needed for this.</li>
+    <li><strong>Later:</strong> standardize the review focus as a shared <code>review-pr</code> skill in the plugin repo (security for backend services, accessibility/perf for React apps).</li>
+  </ul>
+</div>
+
+<h2><span class="num">4</span> Consistency via hooks <span class="tag">Week 3</span></h2>
+<div class="card">
+  <p>Add a checked-in <strong>PostToolUse hook</strong> that runs <code>prettier --write</code> (and optionally <code>eslint --fix</code>) on any file Claude edits.</p>
+  <p>This single hook eliminates the whole category of "Claude's formatting doesn't match ours" review comments across all 12 devs. Configure it in <code>.claude/settings.json</code> (the <code>/update-config</code> skill can set it up).</p>
+</div>
+
+<h2><span class="num">5</span> Team habits that stretch the Max plans</h2>
+<ul>
+  <li><strong>Plan mode for non-trivial work</strong> (shift+tab twice). Reviewing a plan costs almost nothing; letting Claude build the wrong thing burns a big chunk of a 5-hour window.</li>
+  <li><strong>Model choice is the biggest lever on weekly limits.</strong> Sonnet for routine implementation; Opus/Fable for gnarly debugging and architecture. Switch per task with <code>/model</code>.</li>
+  <li><strong>Scope prompts to the task</strong> — in the nx monorepo especially, telling Claude <em>which app/lib</em> to work in avoids expensive exploration.</li>
+  <li><strong>A #claude-code Slack channel</strong> where devs post skills/prompts that worked. Recurring prompts graduate into skills in the shared plugin repo.</li>
+</ul>
+
+<h2><span class="num">6</span> Rollout schedule</h2>
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>Week</th><th>What ships</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Week 1</strong></td>
+      <td>CLAUDE.md + settings.json in the 2 highest-traffic repos; shared plugin-repo skeleton.</td>
+    </tr>
+    <tr>
+      <td><strong>Week 2</strong></td>
+      <td><code>/code-review</code> habit + GitHub action (mention-based) on those repos; first 3 skills.</td>
+    </tr>
+    <tr>
+      <td><strong>Week 3</strong></td>
+      <td>Roll out to remaining repos; add the formatter hook.</td>
+    </tr>
+    <tr>
+      <td><strong>Week 4</strong></td>
+      <td>Review what devs actually use; prune what they don't.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<footer>
+  Prepared with Claude Code · Plan assumes individual Max subscriptions for interactive work and a capped API key for CI automation.
+</footer>
+
+</div>
+</body>
+</html>

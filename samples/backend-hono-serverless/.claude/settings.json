@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm install)",
+      "Bash(pnpm test:*)",
+      "Bash(pnpm lint:*)",
+      "Bash(pnpm typecheck)",
+      "Bash(npx serverless print:*)",
+      "Bash(npx serverless info:*)",
+      "Bash(npx serverless logs:*)",
+      "Bash(docker compose up -d)",
+      "Bash(docker compose ps:*)"
+    ],
+    "deny": [
+      "Bash(npx serverless deploy --stage prod:*)",
+      "Bash(pnpm deploy:prod)",
+      "Bash(npx serverless remove:*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path' | { read f; case \"$f\" in *.ts|*.tsx|*.json|*.yml) npx prettier --write \"$f\" >/dev/null 2>&1 || true ;; esac; }"
+          }
+        ]
+      }
+    ]
+  }
+}

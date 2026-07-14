@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm install)",
+      "Bash(pnpm nx test:*)",
+      "Bash(pnpm nx lint:*)",
+      "Bash(pnpm nx build:*)",
+      "Bash(pnpm nx typecheck:*)",
+      "Bash(pnpm nx affected:*)",
+      "Bash(pnpm nx g:*)",
+      "Bash(pnpm nx show:*)",
+      "Bash(pnpm nx graph:*)",
+      "Bash(pnpm nx reset)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path' | { read f; case \"$f\" in *.ts|*.tsx|*.css|*.json) npx prettier --write \"$f\" >/dev/null 2>&1 || true ;; esac; }"
+          }
+        ]
+      }
+    ]
+  }
+}
