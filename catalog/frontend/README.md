@@ -30,6 +30,11 @@ Two kinds of skills, complementary:
 | new-form | schema validation, submit states, server errors, a11y |
 | add-feature-flag | gate code, default off, cleanup ticket |
 | add-translation | i18n keys, plurals/interpolation, locale TODOs |
+
+## Product Analytics — [product-analytics/](product-analytics/)
+
+| Skill | Covers |
+|---|---|
 | add-analytics-event | task: typed catalog, naming, when to fire, test |
 | amplitude | library: SDK wrapper, identify/reset lifecycle, proxying, no PII |
 

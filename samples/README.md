@@ -9,7 +9,7 @@ contract (i18n, analytics, Sentry/replay, data-testid, tests) that makes
 "AI writes, developer reviews" enforceable without human nagging.
 
 **Skill menu: [../catalog/frontend/](../catalog/frontend/)** — 38 ready-made
-frontend skills in 9 categories (task skills + library-convention skills) to
+frontend skills in 10 categories (task skills + library-convention skills) to
 pick from per repo (adapt placeholders first; install 5–8, prune monthly).
 
 Sample setups matching our stacks. To use one, copy the **contents** of the

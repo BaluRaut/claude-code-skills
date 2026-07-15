@@ -32,7 +32,7 @@ Copy into a repo's root, adapt the placeholders, commit:
 See the [samples guide](samples/README.md) for how to apply them
 (existing repo = derive from real code; new repo = impose the template).
 
-## Frontend skill catalog (38 skills, 9 categories)
+## Frontend skill catalog (38 skills, 10 categories)
 
 A menu — install 5–8 per repo, adapt placeholders first, prune monthly.
 
@@ -43,9 +43,10 @@ A menu — install 5–8 per repo, adapt placeholders first, prune monthly.
 **Feature Development:** [new-page](catalog/frontend/feature-development/new-page/SKILL.md) ·
 [new-form](catalog/frontend/feature-development/new-form/SKILL.md) ·
 [add-feature-flag](catalog/frontend/feature-development/add-feature-flag/SKILL.md) ·
-[add-translation](catalog/frontend/feature-development/add-translation/SKILL.md) ·
-[add-analytics-event](catalog/frontend/feature-development/add-analytics-event/SKILL.md) ·
-[amplitude](catalog/frontend/feature-development/amplitude/SKILL.md)
+[add-translation](catalog/frontend/feature-development/add-translation/SKILL.md)
+
+**Product Analytics:** [add-analytics-event](catalog/frontend/product-analytics/add-analytics-event/SKILL.md) ·
+[amplitude](catalog/frontend/product-analytics/amplitude/SKILL.md)
 
 **State Management & Data Fetching:** [new-data-hook](catalog/frontend/state-management-data/new-data-hook/SKILL.md) ·
 [tanstack-query](catalog/frontend/state-management-data/tanstack-query/SKILL.md) ·
