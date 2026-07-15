@@ -15,6 +15,7 @@ The `new-endpoint` and `deploy` task skills live in
 |---|---|
 | hono-patterns | routers, middleware order, zod validation, error taxonomy |
 | hono-middleware | writing middleware: await-next contract, short-circuit, testing |
+| api-design | REST naming, versioning, status-code policy, list/error shapes, cursors |
 | serverless-v3-config | serverless.yml discipline, per-function IAM, packaging |
 | lambda-patterns | cold starts, timeouts, retries semantics, idempotency |
 | aws-sdk-v3 | client reuse, modular imports, pagination, retry config |

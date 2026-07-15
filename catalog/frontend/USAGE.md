@@ -22,6 +22,33 @@ This is why descriptions matter and why you DON'T install all 43: every
 installed skill is a candidate on every task. Ten well-chosen skills get
 matched correctly; thirty make matching mushy.
 
+## Composing skills for review (the staff-engineer prompt)
+
+Skill names are addressable in prompts — you can name several at once and
+set a priority order, and Claude reviews the way your best senior would.
+This is the highest-leverage move for an engineering lead: it turns a vague
+"review this" into a consistent rubric every dev (and every AI interaction)
+applies the same way.
+
+```
+Review src/services/CustomerService.ts against:
+  typescript, code-design-solid, api-security, logging-observability
+Prioritize, most-important first:
+  1. correctness bugs   2. security   3. performance
+  4. maintainability    5. testability
+Report findings worst-first as file:line — issue — fix. Don't rewrite yet.
+```
+
+- The named skills become the review rubric; unnamed installed skills still
+  contribute, but naming focuses it
+- Backend PR → name `code-design-solid`, `api-design`, `api-security`,
+  `sentry-node`/`datadog-apm`; frontend PR → `typescript`,
+  `code-design-solid`, `component-review`, `frontend-security`
+- This is also exactly what the pre-push hook and `/code-review` do with
+  CLAUDE.md — the same rubric, whether triggered by a hook or typed by hand
+- Graduate the recurring recipe into a team `review-pr` skill in the shared
+  plugin so nobody retypes it (see the rollout plan)
+
 ---
 
 ## Repo condition 1: the legacy app

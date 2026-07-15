@@ -94,7 +94,7 @@ A menu — install 5–8 per repo, adapt placeholders first, prune monthly.
 [auth-patterns](catalog/frontend/security-reliability/auth-patterns/SKILL.md) ·
 [datadog-rum](catalog/frontend/security-reliability/datadog-rum/SKILL.md)
 
-## Backend skill catalog (21 skills, 8 categories)
+## Backend skill catalog (22 skills, 8 categories)
 
 Node serverless on AWS — Hono + Serverless Framework v3. Same rules:
 install only for infrastructure the service actually uses.
@@ -103,6 +103,7 @@ install only for infrastructure the service actually uses.
 
 **Service Patterns:** [hono-patterns](catalog/backend/service-patterns/hono-patterns/SKILL.md) ·
 [hono-middleware](catalog/backend/service-patterns/hono-middleware/SKILL.md) ·
+[api-design](catalog/backend/service-patterns/api-design/SKILL.md) ·
 [serverless-v3-config](catalog/backend/service-patterns/serverless-v3-config/SKILL.md) ·
 [lambda-patterns](catalog/backend/service-patterns/lambda-patterns/SKILL.md) ·
 [aws-sdk-v3](catalog/backend/service-patterns/aws-sdk-v3/SKILL.md)
