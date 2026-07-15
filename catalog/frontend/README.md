@@ -3,7 +3,7 @@
 **How to actually use these → [USAGE.md](USAGE.md)** — real cases, three repo
 conditions (legacy / modern monorepo / greenfield), and the 4-week adoption loop.
 
-A menu of 29 skills covering the common frontend tasks and libraries,
+A menu of 30 skills covering the common frontend tasks and libraries,
 organized by category. **Nothing here goes into a repo verbatim** — this
 folder costs nothing sitting here; installed skills cost context in every
 session. Process:
@@ -40,6 +40,7 @@ Two kinds of skills, complementary:
 | tanstack-query | library: defaults, key factories, optimistic updates |
 | zustand-store | client-state only, feature stores, selector discipline |
 | redux-toolkit | slices, typed hooks, what does NOT go in the store |
+| immer | produce/useImmer draft rules, RTK/zustand integration, pitfalls |
 
 ## Styling & Design Systems — [styling-design-systems/](styling-design-systems/)
 

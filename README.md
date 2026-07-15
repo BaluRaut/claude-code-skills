@@ -32,7 +32,7 @@ Copy into a repo's root, adapt the placeholders, commit:
 See the [samples guide](samples/README.md) for how to apply them
 (existing repo = derive from real code; new repo = impose the template).
 
-## Frontend skill catalog (29 skills, 8 categories)
+## Frontend skill catalog (30 skills, 8 categories)
 
 A menu — install 5–8 per repo, adapt placeholders first, prune monthly.
 
@@ -49,7 +49,8 @@ A menu — install 5–8 per repo, adapt placeholders first, prune monthly.
 **State Management & Data Fetching:** [new-data-hook](catalog/frontend/state-management-data/new-data-hook/SKILL.md) ·
 [tanstack-query](catalog/frontend/state-management-data/tanstack-query/SKILL.md) ·
 [zustand-store](catalog/frontend/state-management-data/zustand-store/SKILL.md) ·
-[redux-toolkit](catalog/frontend/state-management-data/redux-toolkit/SKILL.md)
+[redux-toolkit](catalog/frontend/state-management-data/redux-toolkit/SKILL.md) ·
+[immer](catalog/frontend/state-management-data/immer/SKILL.md)
 
 **Styling & Design Systems:** [theming](catalog/frontend/styling-design-systems/theming/SKILL.md) ·
 [styled-components](catalog/frontend/styling-design-systems/styled-components/SKILL.md) ·

@@ -8,7 +8,7 @@ baseline every repo must satisfy, plus how to bootstrap an existing repo
 contract (i18n, analytics, Sentry/replay, data-testid, tests) that makes
 "AI writes, developer reviews" enforceable without human nagging.
 
-**Skill menu: [../catalog/frontend/](../catalog/frontend/)** — 29 ready-made
+**Skill menu: [../catalog/frontend/](../catalog/frontend/)** — 30 ready-made
 frontend skills in 8 categories (task skills + library-convention skills) to
 pick from per repo (adapt placeholders first; install 5–8, prune monthly).
 
