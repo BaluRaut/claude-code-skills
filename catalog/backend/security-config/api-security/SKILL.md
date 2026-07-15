@@ -51,7 +51,25 @@ Per-function IAM matching actual calls (serverless-v3-config §2); secrets
 via secrets-config, never committed or in plaintext env; public endpoints
 rate-limited [adapt: WAF / API GW throttling] with a stated budget.
 
-## 6. Verify
+## 6. The OWASP extras (checked when the pattern appears)
+
+- **SSRF**: any user-influenced URL fetched server-side (webhooks-out,
+  importers, image proxies) → allowlist of hosts/schemes, resolve-and-block
+  private ranges + cloud metadata (169.254.169.254), no redirects-follow
+  into private space
+- **Mass assignment**: never spread a request body into a DB write —
+  zod schemas with explicit fields (`.strict()` [adapt]) ARE the
+  allowlist; `{ ...body }` into an update is the review catch
+- **CSRF**: cookie-based auth → SameSite + CSRF token [adapt]; pure
+  bearer-token APIs are exempt — know which one each endpoint is
+- **Password handling** (only if the service stores credentials [adapt:
+  most use the IdP — then this section is N/A]): argon2id/bcrypt with
+  vetted libraries, never hand-rolled, never reversible, never logged
+- **Audit logging**: security-relevant events (login/logout, permission
+  changes, data exports, admin actions) logged with actor + target +
+  requestId (logging-observability) — queryable answer to "who did what"
+
+## 7. Verify
 
 Per new endpoint: 401 no token, 403/404 wrong tenant (IDOR test — the one
 that matters), 400 oversized/malformed input, error body leaks nothing.

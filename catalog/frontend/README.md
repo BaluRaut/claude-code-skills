@@ -3,7 +3,7 @@
 **How to actually use these → [USAGE.md](USAGE.md)** — real cases, three repo
 conditions (legacy / modern monorepo / greenfield), and the 4-week adoption loop.
 
-A menu of 42 skills covering the common frontend tasks and libraries,
+A menu of 43 skills covering the common frontend tasks and libraries,
 organized by category. **Nothing here goes into a repo verbatim** — this
 folder costs nothing sitting here; installed skills cost context in every
 session. Process:
@@ -101,6 +101,7 @@ Two kinds of skills, complementary:
 | a11y-audit | axe + keyboard + focus + labels pass |
 | upgrade-deps | one major at a time, changelog-driven |
 | refactor-component | tests green before, behavior frozen during |
+| component-review | audit: size/complexity/testability/DRY findings, doesn't rewrite |
 
 ## Code Quality & Design — [code-quality/](code-quality/)
 

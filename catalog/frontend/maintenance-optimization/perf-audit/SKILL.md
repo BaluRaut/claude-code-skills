@@ -16,9 +16,14 @@ baseline number are folklore. Report before/after for everything you change.
 ## 2. Bundle (usually the biggest win)
 
 - Analyze: [vite-bundle-visualizer / nx bundle analysis — adapt]
-- Every route lazy-loaded? (see new-page)
+- Every route lazy-loaded? (see new-page) Heavy non-route components
+  (charts, editors, modals) → `React.lazy` + `<Suspense>` with a skeleton
+  fallback at the split point
 - Heavy libs: charting/date/editor libs pulled into the main chunk → dynamic
   import; lodash → per-method imports; moment → replace [per repo policy]
+- Tree-shaking health: ESM named imports only (a CJS dep or a `import *`
+  barrel drags the whole package); barrel files re-exporting everything
+  defeat shaking — import from the module, check `sideEffects` in package.json
 - Duplicate dependencies (two versions of the same lib) → dedupe in lockfile
 
 ## 3. Re-renders

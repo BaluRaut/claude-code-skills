@@ -44,7 +44,19 @@ skill encodes the JUDGMENT lint can't.
 - `catch (e)`: `e` is `unknown` — narrow before using (typescript §4);
   rethrow with `{ cause: e }` when wrapping, so the chain survives
 
-## 5. Everyday judgment
+## 5. Leaks & closures (the slow bugs)
+
+- Everything started gets stopped: listeners/timers/observers/sockets have
+  a cleanup path — in React that's effect cleanup (react-effects §2)
+- Module-level caches are UNBOUNDED by default → give them eviction (LRU,
+  TTL) or `WeakMap`/`WeakRef` keyed by the object whose lifetime you mean
+- Stale closures: a long-lived callback (timer, subscription, debounce)
+  captures the variables from WHEN IT WAS CREATED — re-create it when deps
+  change or read through a ref; "why does it log the old value" is this
+- Closures capturing large objects keep them alive — extract just the
+  fields the callback needs
+
+## 6. Everyday judgment
 
 - Array methods over loops when it reads better — but a `for...of` beats a
   4-level method chain; readability wins, not dogma

@@ -32,7 +32,7 @@ Copy into a repo's root, adapt the placeholders, commit:
 See the [samples guide](samples/README.md) for how to apply them
 (existing repo = derive from real code; new repo = impose the template).
 
-## Frontend skill catalog (42 skills, 11 categories)
+## Frontend skill catalog (43 skills, 11 categories)
 
 A menu — install 5–8 per repo, adapt placeholders first, prune monthly.
 
@@ -82,7 +82,8 @@ A menu — install 5–8 per repo, adapt placeholders first, prune monthly.
 [perf-audit](catalog/frontend/maintenance-optimization/perf-audit/SKILL.md) ·
 [a11y-audit](catalog/frontend/maintenance-optimization/a11y-audit/SKILL.md) ·
 [upgrade-deps](catalog/frontend/maintenance-optimization/upgrade-deps/SKILL.md) ·
-[refactor-component](catalog/frontend/maintenance-optimization/refactor-component/SKILL.md)
+[refactor-component](catalog/frontend/maintenance-optimization/refactor-component/SKILL.md) ·
+[component-review](catalog/frontend/maintenance-optimization/component-review/SKILL.md)
 
 **Code Quality & Design:** [javascript](catalog/frontend/code-quality/javascript/SKILL.md) ·
 [typescript](catalog/frontend/code-quality/typescript/SKILL.md) ·
