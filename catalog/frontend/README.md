@@ -3,7 +3,7 @@
 **How to actually use these → [USAGE.md](USAGE.md)** — real cases, three repo
 conditions (legacy / modern monorepo / greenfield), and the 4-week adoption loop.
 
-A menu of 38 skills covering the common frontend tasks and libraries,
+A menu of 42 skills covering the common frontend tasks and libraries,
 organized by category. **Nothing here goes into a repo verbatim** — this
 folder costs nothing sitting here; installed skills cost context in every
 session. Process:
@@ -48,6 +48,7 @@ Two kinds of skills, complementary:
 | redux-toolkit | slices, typed hooks, what does NOT go in the store |
 | immer | produce/useImmer draft rules, RTK/zustand integration, pitfalls |
 | http-client | the one client under all hooks: auth, 401 refresh, ApiError shape |
+| axios | one instance, interceptor order, idempotent-only retry, no blind POST retry |
 
 ## Styling & Design Systems — [styling-design-systems/](styling-design-systems/)
 
@@ -100,6 +101,14 @@ Two kinds of skills, complementary:
 | a11y-audit | axe + keyboard + focus + labels pass |
 | upgrade-deps | one major at a time, changelog-driven |
 | refactor-component | tests green before, behavior frozen during |
+
+## Code Quality & Design — [code-quality/](code-quality/)
+
+| Skill | Covers |
+|---|---|
+| javascript | async discipline, ?? vs \|\|, immutability, Error objects |
+| typescript | strict mode, no any/!, unknown at boundaries, discriminated unions |
+| code-design-solid | SOLID for React, size/cognitive limits, pure testable logic, DRY rule of three |
 
 ## Security & Reliability — [security-reliability/](security-reliability/)
 

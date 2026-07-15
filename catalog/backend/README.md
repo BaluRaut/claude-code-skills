@@ -14,6 +14,7 @@ The `new-endpoint` and `deploy` task skills live in
 | Skill | Covers |
 |---|---|
 | hono-patterns | routers, middleware order, zod validation, error taxonomy |
+| hono-middleware | writing middleware: await-next contract, short-circuit, testing |
 | serverless-v3-config | serverless.yml discipline, per-function IAM, packaging |
 | lambda-patterns | cold starts, timeouts, retries semantics, idempotency |
 | aws-sdk-v3 | client reuse, modular imports, pagination, retry config |
@@ -54,6 +55,14 @@ The `new-endpoint` and `deploy` task skills live in
 |---|---|
 | logging-observability | pino + correlation IDs, metrics/alarms, log hygiene |
 | debug-prod-error | task: the triage runbook — logs → trace → cause → rollback/fix |
+| sentry-node | capture-once in onError, flush-before-freeze, source maps |
+| datadog-apm | extension layer, unified tagging, RUM trace correlation, log injection |
+
+## Code Quality — [code-quality/](code-quality/)
+
+| Skill | Covers |
+|---|---|
+| code-design-solid | handler/service/repo layering, size limits, DRY across services |
 
 ## Testing — [testing/](testing/)
 

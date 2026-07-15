@@ -32,7 +32,7 @@ Copy into a repo's root, adapt the placeholders, commit:
 See the [samples guide](samples/README.md) for how to apply them
 (existing repo = derive from real code; new repo = impose the template).
 
-## Frontend skill catalog (38 skills, 10 categories)
+## Frontend skill catalog (42 skills, 11 categories)
 
 A menu — install 5–8 per repo, adapt placeholders first, prune monthly.
 
@@ -53,7 +53,8 @@ A menu — install 5–8 per repo, adapt placeholders first, prune monthly.
 [zustand-store](catalog/frontend/state-management-data/zustand-store/SKILL.md) ·
 [redux-toolkit](catalog/frontend/state-management-data/redux-toolkit/SKILL.md) ·
 [immer](catalog/frontend/state-management-data/immer/SKILL.md) ·
-[http-client](catalog/frontend/state-management-data/http-client/SKILL.md)
+[http-client](catalog/frontend/state-management-data/http-client/SKILL.md) ·
+[axios](catalog/frontend/state-management-data/axios/SKILL.md)
 
 **Styling & Design Systems:** [theming](catalog/frontend/styling-design-systems/theming/SKILL.md) ·
 [styled-components](catalog/frontend/styling-design-systems/styled-components/SKILL.md) ·
@@ -83,12 +84,16 @@ A menu — install 5–8 per repo, adapt placeholders first, prune monthly.
 [upgrade-deps](catalog/frontend/maintenance-optimization/upgrade-deps/SKILL.md) ·
 [refactor-component](catalog/frontend/maintenance-optimization/refactor-component/SKILL.md)
 
+**Code Quality & Design:** [javascript](catalog/frontend/code-quality/javascript/SKILL.md) ·
+[typescript](catalog/frontend/code-quality/typescript/SKILL.md) ·
+[code-design-solid](catalog/frontend/code-quality/code-design-solid/SKILL.md)
+
 **Security & Reliability:** [error-monitoring](catalog/frontend/security-reliability/error-monitoring/SKILL.md) ·
 [frontend-security](catalog/frontend/security-reliability/frontend-security/SKILL.md) ·
 [auth-patterns](catalog/frontend/security-reliability/auth-patterns/SKILL.md) ·
 [datadog-rum](catalog/frontend/security-reliability/datadog-rum/SKILL.md)
 
-## Backend skill catalog (17 skills, 7 categories)
+## Backend skill catalog (21 skills, 8 categories)
 
 Node serverless on AWS — Hono + Serverless Framework v3. Same rules:
 install only for infrastructure the service actually uses.
@@ -96,6 +101,7 @@ install only for infrastructure the service actually uses.
 - **[Catalog & menu](catalog/backend/README.md)**
 
 **Service Patterns:** [hono-patterns](catalog/backend/service-patterns/hono-patterns/SKILL.md) ·
+[hono-middleware](catalog/backend/service-patterns/hono-middleware/SKILL.md) ·
 [serverless-v3-config](catalog/backend/service-patterns/serverless-v3-config/SKILL.md) ·
 [lambda-patterns](catalog/backend/service-patterns/lambda-patterns/SKILL.md) ·
 [aws-sdk-v3](catalog/backend/service-patterns/aws-sdk-v3/SKILL.md)
@@ -115,7 +121,11 @@ install only for infrastructure the service actually uses.
 [containers-eks-ecr](catalog/backend/infra-delivery/containers-eks-ecr/SKILL.md)
 
 **Observability:** [logging-observability](catalog/backend/observability/logging-observability/SKILL.md) ·
-[debug-prod-error](catalog/backend/observability/debug-prod-error/SKILL.md)
+[debug-prod-error](catalog/backend/observability/debug-prod-error/SKILL.md) ·
+[sentry-node](catalog/backend/observability/sentry-node/SKILL.md) ·
+[datadog-apm](catalog/backend/observability/datadog-apm/SKILL.md)
+
+**Code Quality:** [code-design-solid](catalog/backend/code-quality/code-design-solid/SKILL.md)
 
 **Testing:** [node-testing](catalog/backend/testing/node-testing/SKILL.md)
 

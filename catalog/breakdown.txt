@@ -1,0 +1,44 @@
+Breakdown of the Capabilities:
+
+Quality Assurance: 
+    Automated tools for writing testing suites (write-unit-tests, write-e2e-test) and 
+    debugging unstable code (fix-flaky-test).
+
+Feature Development: 
+    Protocols for accelerating UI delivery (new-page, new-form) and 
+    implementing experimentation infrastructure (add-feature-flag).
+
+Maintenance & Optimization:
+    Playbooks to manage project health (upgrade-deps), optimize rendering (perf-audit), 
+    and handle accessibility validation (a11y-audit).
+
+Design Systems: 
+    Specific knowledge wrappers for scaling UI libraries (antd, styled-components, theming).
+
+
+    State Management & Data Fetching
+* tanstack-query
+* zustand-store
+* redux-toolkit
+
+
+Styling & Design Systems
+* styled-components
+
+
+Validation & Forms
+* zod-schemas
+
+
+Testing & Quality Assurance
+* playwright-e2e
+* jest-unit
+* vitest-unit
+* testing-library-react
+
+Framework Core Utilities
+* react-router-v6
+
+Utilities & Performance
+* lodash-utils
+* date-fns-utils
