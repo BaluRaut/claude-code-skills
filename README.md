@@ -131,6 +131,15 @@ install only for infrastructure the service actually uses.
 
 **Testing:** [node-testing](catalog/backend/testing/node-testing/SKILL.md)
 
+## Framework & governance
+
+- **[Authoring & verification contract](catalog/AUTHORING.md)** — how to write
+  a trustable skill; the Inputs → Outputs → Verify → Failure-modes contract
+  every skill states ([worked example](catalog/frontend/feature-development/new-form/SKILL.md#verification-contract)).
+- **[Measuring impact](measuring-impact.md)** — the before/after metrics that
+  prove the skills pay off (cycle time, escaped defects, review load), with
+  how to source each number and the gaming traps to avoid.
+
 ## The core ideas
 
 1. **Catalog broad, install narrow** — this repo costs nothing; skills

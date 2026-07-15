@@ -52,3 +52,20 @@ event on successful submit (not on click).
 Validation error shows for bad input · valid submit calls the mutation with
 correct payload · server field-error renders on the right field · submit
 button disables while pending.
+
+## Verification contract
+
+The canonical example of the contract every skill states (see
+[../../../AUTHORING.md](../../../AUTHORING.md)).
+
+- **Inputs**: the API contract (endpoint + request/response schema), the
+  field-level validation rules, the UI/design for the form.
+- **Outputs**: a schema-first form component, a typed submit handler wired to
+  the mutation hook, field- and form-level error rendering, tests.
+- **Verify**: `typecheck` · `test` (the four cases in §6) · run the form in
+  the app and submit once valid, once invalid.
+- **Failure modes** (what review + tests must catch): hardcoded validation
+  messages instead of i18n keys; double-submit (button not disabled while
+  pending); server field-errors dropped instead of mapped via `setError`;
+  analytics fired on click instead of on success; missing `defaultValues`
+  (controlled/uncontrolled warning); inputs without labels (a11y).
