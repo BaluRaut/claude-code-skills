@@ -32,7 +32,7 @@ Copy into a repo's root, adapt the placeholders, commit:
 See the [samples guide](samples/README.md) for how to apply them
 (existing repo = derive from real code; new repo = impose the template).
 
-## Frontend skill catalog (28 skills)
+## Frontend skill catalog (29 skills, 8 categories)
 
 A menu — install 5–8 per repo, adapt placeholders first, prune monthly.
 
@@ -40,36 +40,42 @@ A menu — install 5–8 per repo, adapt placeholders first, prune monthly.
 - **[Usage playbook](catalog/frontend/USAGE.md)** — real cases, three repo
   conditions (legacy / modern monorepo / greenfield), the 4-week adoption loop
 
-Building: [new-page](catalog/frontend/new-page/SKILL.md) ·
-[new-data-hook](catalog/frontend/new-data-hook/SKILL.md) ·
-[new-form](catalog/frontend/new-form/SKILL.md)
-&nbsp;|&nbsp; Conventions: [add-translation](catalog/frontend/add-translation/SKILL.md) ·
-[add-analytics-event](catalog/frontend/add-analytics-event/SKILL.md) ·
-[add-testids](catalog/frontend/add-testids/SKILL.md) ·
-[add-feature-flag](catalog/frontend/add-feature-flag/SKILL.md)
-&nbsp;|&nbsp; Testing: [write-unit-tests](catalog/frontend/write-unit-tests/SKILL.md) ·
-[write-e2e-test](catalog/frontend/write-e2e-test/SKILL.md) ·
-[fix-flaky-test](catalog/frontend/fix-flaky-test/SKILL.md)
-&nbsp;|&nbsp; Maintenance: [debug-ui-bug](catalog/frontend/debug-ui-bug/SKILL.md) ·
-[perf-audit](catalog/frontend/perf-audit/SKILL.md) ·
-[a11y-audit](catalog/frontend/a11y-audit/SKILL.md) ·
-[upgrade-deps](catalog/frontend/upgrade-deps/SKILL.md) ·
-[refactor-component](catalog/frontend/refactor-component/SKILL.md)
-&nbsp;|&nbsp; UI stack: [theming](catalog/frontend/theming/SKILL.md) ·
-[styled-components](catalog/frontend/styled-components/SKILL.md) ·
-[antd](catalog/frontend/antd/SKILL.md)
+**Feature Development:** [new-page](catalog/frontend/feature-development/new-page/SKILL.md) ·
+[new-form](catalog/frontend/feature-development/new-form/SKILL.md) ·
+[add-feature-flag](catalog/frontend/feature-development/add-feature-flag/SKILL.md) ·
+[add-translation](catalog/frontend/feature-development/add-translation/SKILL.md) ·
+[add-analytics-event](catalog/frontend/feature-development/add-analytics-event/SKILL.md)
 
-Library conventions — State & data: [tanstack-query](catalog/frontend/tanstack-query/SKILL.md) ·
-[zustand-store](catalog/frontend/zustand-store/SKILL.md) ·
-[redux-toolkit](catalog/frontend/redux-toolkit/SKILL.md)
-&nbsp;|&nbsp; Validation: [zod-schemas](catalog/frontend/zod-schemas/SKILL.md)
-&nbsp;|&nbsp; Testing: [playwright-e2e](catalog/frontend/playwright-e2e/SKILL.md) ·
-[vitest-unit](catalog/frontend/vitest-unit/SKILL.md) ·
-[jest-unit](catalog/frontend/jest-unit/SKILL.md) ·
-[testing-library-react](catalog/frontend/testing-library-react/SKILL.md)
-&nbsp;|&nbsp; Routing: [react-router-v6](catalog/frontend/react-router-v6/SKILL.md)
-&nbsp;|&nbsp; Utilities: [lodash-utils](catalog/frontend/lodash-utils/SKILL.md) ·
-[date-fns-utils](catalog/frontend/date-fns-utils/SKILL.md)
+**State Management & Data Fetching:** [new-data-hook](catalog/frontend/state-management-data/new-data-hook/SKILL.md) ·
+[tanstack-query](catalog/frontend/state-management-data/tanstack-query/SKILL.md) ·
+[zustand-store](catalog/frontend/state-management-data/zustand-store/SKILL.md) ·
+[redux-toolkit](catalog/frontend/state-management-data/redux-toolkit/SKILL.md)
+
+**Styling & Design Systems:** [theming](catalog/frontend/styling-design-systems/theming/SKILL.md) ·
+[styled-components](catalog/frontend/styling-design-systems/styled-components/SKILL.md) ·
+[antd](catalog/frontend/styling-design-systems/antd/SKILL.md)
+
+**Validation & Forms:** [zod-schemas](catalog/frontend/validation-forms/zod-schemas/SKILL.md)
+
+**Testing & QA:** [write-unit-tests](catalog/frontend/testing-qa/write-unit-tests/SKILL.md) ·
+[write-e2e-test](catalog/frontend/testing-qa/write-e2e-test/SKILL.md) ·
+[fix-flaky-test](catalog/frontend/testing-qa/fix-flaky-test/SKILL.md) ·
+[add-testids](catalog/frontend/testing-qa/add-testids/SKILL.md) ·
+[playwright-e2e](catalog/frontend/testing-qa/playwright-e2e/SKILL.md) ·
+[vitest-unit](catalog/frontend/testing-qa/vitest-unit/SKILL.md) ·
+[jest-unit](catalog/frontend/testing-qa/jest-unit/SKILL.md) ·
+[testing-library-react](catalog/frontend/testing-qa/testing-library-react/SKILL.md)
+
+**Framework Core:** [react-router-v6](catalog/frontend/framework-core/react-router-v6/SKILL.md)
+
+**Utilities & Performance:** [lodash-utils](catalog/frontend/utilities-performance/lodash-utils/SKILL.md) ·
+[date-fns-utils](catalog/frontend/utilities-performance/date-fns-utils/SKILL.md)
+
+**Maintenance & Optimization:** [debug-ui-bug](catalog/frontend/maintenance-optimization/debug-ui-bug/SKILL.md) ·
+[perf-audit](catalog/frontend/maintenance-optimization/perf-audit/SKILL.md) ·
+[a11y-audit](catalog/frontend/maintenance-optimization/a11y-audit/SKILL.md) ·
+[upgrade-deps](catalog/frontend/maintenance-optimization/upgrade-deps/SKILL.md) ·
+[refactor-component](catalog/frontend/maintenance-optimization/refactor-component/SKILL.md)
 
 ## The core ideas
 

@@ -18,7 +18,7 @@ Two ways, both automatic once installed in `.claude/skills/`:
    form" — Claude matches the task against installed skills' descriptions and
    pulls in `new-page`, `new-data-hook`, `new-form` on its own.
 
-This is why descriptions matter and why you DON'T install all 28: every
+This is why descriptions matter and why you DON'T install all 29: every
 installed skill is a candidate on every task. Ten well-chosen skills get
 matched correctly; thirty make matching mushy.
 
