@@ -88,6 +88,37 @@ A menu — install 5–8 per repo, adapt placeholders first, prune monthly.
 [auth-patterns](catalog/frontend/security-reliability/auth-patterns/SKILL.md) ·
 [datadog-rum](catalog/frontend/security-reliability/datadog-rum/SKILL.md)
 
+## Backend skill catalog (17 skills, 7 categories)
+
+Node serverless on AWS — Hono + Serverless Framework v3. Same rules:
+install only for infrastructure the service actually uses.
+
+- **[Catalog & menu](catalog/backend/README.md)**
+
+**Service Patterns:** [hono-patterns](catalog/backend/service-patterns/hono-patterns/SKILL.md) ·
+[serverless-v3-config](catalog/backend/service-patterns/serverless-v3-config/SKILL.md) ·
+[lambda-patterns](catalog/backend/service-patterns/lambda-patterns/SKILL.md) ·
+[aws-sdk-v3](catalog/backend/service-patterns/aws-sdk-v3/SKILL.md)
+
+**Data & Storage:** [dynamodb](catalog/backend/data-storage/dynamodb/SKILL.md) ·
+[rds-postgres](catalog/backend/data-storage/rds-postgres/SKILL.md) ·
+[s3](catalog/backend/data-storage/s3/SKILL.md)
+
+**Messaging & Events:** [sqs](catalog/backend/messaging-events/sqs/SKILL.md) ·
+[eventbridge](catalog/backend/messaging-events/eventbridge/SKILL.md)
+
+**Security & Config:** [api-security](catalog/backend/security-config/api-security/SKILL.md) ·
+[secrets-config](catalog/backend/security-config/secrets-config/SKILL.md)
+
+**Infra & Delivery:** [cloudfront](catalog/backend/infra-delivery/cloudfront/SKILL.md) ·
+[vpc-networking](catalog/backend/infra-delivery/vpc-networking/SKILL.md) ·
+[containers-eks-ecr](catalog/backend/infra-delivery/containers-eks-ecr/SKILL.md)
+
+**Observability:** [logging-observability](catalog/backend/observability/logging-observability/SKILL.md) ·
+[debug-prod-error](catalog/backend/observability/debug-prod-error/SKILL.md)
+
+**Testing:** [node-testing](catalog/backend/testing/node-testing/SKILL.md)
+
 ## The core ideas
 
 1. **Catalog broad, install narrow** — this repo costs nothing; skills
