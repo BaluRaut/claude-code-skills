@@ -3,7 +3,7 @@
 **How to actually use these → [USAGE.md](USAGE.md)** — real cases, three repo
 conditions (legacy / modern monorepo / greenfield), and the 4-week adoption loop.
 
-A menu of 36 skills covering the common frontend tasks and libraries,
+A menu of 38 skills covering the common frontend tasks and libraries,
 organized by category. **Nothing here goes into a repo verbatim** — this
 folder costs nothing sitting here; installed skills cost context in every
 session. Process:
@@ -30,7 +30,8 @@ Two kinds of skills, complementary:
 | new-form | schema validation, submit states, server errors, a11y |
 | add-feature-flag | gate code, default off, cleanup ticket |
 | add-translation | i18n keys, plurals/interpolation, locale TODOs |
-| add-analytics-event | typed catalog, naming, when to fire, test |
+| add-analytics-event | task: typed catalog, naming, when to fire, test |
+| amplitude | library: SDK wrapper, identify/reset lifecycle, proxying, no PII |
 
 ## State Management & Data Fetching — [state-management-data/](state-management-data/)
 
@@ -102,6 +103,7 @@ Two kinds of skills, complementary:
 | error-monitoring | one wrapper, boundaries, no swallowed catches, alert hygiene |
 | frontend-security | XSS/dangerouslySetInnerHTML policy, no secrets in bundle, deps |
 | auth-patterns | three-state session, guards, can() gating, logout-clears-all |
+| datadog-rum | one error owner, APM trace correlation, sampling/cost control |
 
 ---
 
