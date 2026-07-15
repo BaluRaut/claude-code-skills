@@ -3,7 +3,7 @@
 **How to actually use these → [USAGE.md](USAGE.md)** — real cases, three repo
 conditions (legacy / modern monorepo / greenfield), and the 4-week adoption loop.
 
-A menu of 30 skills covering the common frontend tasks and libraries,
+A menu of 36 skills covering the common frontend tasks and libraries,
 organized by category. **Nothing here goes into a repo verbatim** — this
 folder costs nothing sitting here; installed skills cost context in every
 session. Process:
@@ -41,6 +41,7 @@ Two kinds of skills, complementary:
 | zustand-store | client-state only, feature stores, selector discipline |
 | redux-toolkit | slices, typed hooks, what does NOT go in the store |
 | immer | produce/useImmer draft rules, RTK/zustand integration, pitfalls |
+| http-client | the one client under all hooks: auth, 401 refresh, ApiError shape |
 
 ## Styling & Design Systems — [styling-design-systems/](styling-design-systems/)
 
@@ -68,12 +69,14 @@ Two kinds of skills, complementary:
 | vitest-unit | Vite-shared config, vi.mock hoisting, fake timers |
 | jest-unit | TS/alias config, mock patterns (Jest repos only) |
 | testing-library-react | query priority, user-event, shared custom render |
+| msw-mocking | per-feature handlers, fail-on-unmocked, schema-valid fixtures |
 
 ## Framework Core — [framework-core/](framework-core/)
 
 | Skill | Covers |
 |---|---|
 | react-router-v6 | central route config, guards, the data-APIs decision |
+| react-effects | the decision tree before useEffect, honest deps, cleanup |
 
 ## Utilities & Performance — [utilities-performance/](utilities-performance/)
 
@@ -91,6 +94,14 @@ Two kinds of skills, complementary:
 | a11y-audit | axe + keyboard + focus + labels pass |
 | upgrade-deps | one major at a time, changelog-driven |
 | refactor-component | tests green before, behavior frozen during |
+
+## Security & Reliability — [security-reliability/](security-reliability/)
+
+| Skill | Covers |
+|---|---|
+| error-monitoring | one wrapper, boundaries, no swallowed catches, alert hygiene |
+| frontend-security | XSS/dangerouslySetInnerHTML policy, no secrets in bundle, deps |
+| auth-patterns | three-state session, guards, can() gating, logout-clears-all |
 
 ---
 

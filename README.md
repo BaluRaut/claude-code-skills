@@ -32,7 +32,7 @@ Copy into a repo's root, adapt the placeholders, commit:
 See the [samples guide](samples/README.md) for how to apply them
 (existing repo = derive from real code; new repo = impose the template).
 
-## Frontend skill catalog (30 skills, 8 categories)
+## Frontend skill catalog (36 skills, 9 categories)
 
 A menu — install 5–8 per repo, adapt placeholders first, prune monthly.
 
@@ -50,7 +50,8 @@ A menu — install 5–8 per repo, adapt placeholders first, prune monthly.
 [tanstack-query](catalog/frontend/state-management-data/tanstack-query/SKILL.md) ·
 [zustand-store](catalog/frontend/state-management-data/zustand-store/SKILL.md) ·
 [redux-toolkit](catalog/frontend/state-management-data/redux-toolkit/SKILL.md) ·
-[immer](catalog/frontend/state-management-data/immer/SKILL.md)
+[immer](catalog/frontend/state-management-data/immer/SKILL.md) ·
+[http-client](catalog/frontend/state-management-data/http-client/SKILL.md)
 
 **Styling & Design Systems:** [theming](catalog/frontend/styling-design-systems/theming/SKILL.md) ·
 [styled-components](catalog/frontend/styling-design-systems/styled-components/SKILL.md) ·
@@ -65,9 +66,11 @@ A menu — install 5–8 per repo, adapt placeholders first, prune monthly.
 [playwright-e2e](catalog/frontend/testing-qa/playwright-e2e/SKILL.md) ·
 [vitest-unit](catalog/frontend/testing-qa/vitest-unit/SKILL.md) ·
 [jest-unit](catalog/frontend/testing-qa/jest-unit/SKILL.md) ·
-[testing-library-react](catalog/frontend/testing-qa/testing-library-react/SKILL.md)
+[testing-library-react](catalog/frontend/testing-qa/testing-library-react/SKILL.md) ·
+[msw-mocking](catalog/frontend/testing-qa/msw-mocking/SKILL.md)
 
-**Framework Core:** [react-router-v6](catalog/frontend/framework-core/react-router-v6/SKILL.md)
+**Framework Core:** [react-router-v6](catalog/frontend/framework-core/react-router-v6/SKILL.md) ·
+[react-effects](catalog/frontend/framework-core/react-effects/SKILL.md)
 
 **Utilities & Performance:** [lodash-utils](catalog/frontend/utilities-performance/lodash-utils/SKILL.md) ·
 [date-fns-utils](catalog/frontend/utilities-performance/date-fns-utils/SKILL.md)
@@ -77,6 +80,10 @@ A menu — install 5–8 per repo, adapt placeholders first, prune monthly.
 [a11y-audit](catalog/frontend/maintenance-optimization/a11y-audit/SKILL.md) ·
 [upgrade-deps](catalog/frontend/maintenance-optimization/upgrade-deps/SKILL.md) ·
 [refactor-component](catalog/frontend/maintenance-optimization/refactor-component/SKILL.md)
+
+**Security & Reliability:** [error-monitoring](catalog/frontend/security-reliability/error-monitoring/SKILL.md) ·
+[frontend-security](catalog/frontend/security-reliability/frontend-security/SKILL.md) ·
+[auth-patterns](catalog/frontend/security-reliability/auth-patterns/SKILL.md)
 
 ## The core ideas
 
