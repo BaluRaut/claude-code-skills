@@ -32,9 +32,9 @@ Copy into a repo's root, adapt the placeholders, commit:
 See the [samples guide](samples/README.md) for how to apply them
 (existing repo = derive from real code; new repo = impose the template).
 
-## Frontend skill catalog (17 skills)
+## Frontend skill catalog (28 skills)
 
-A menu — install 4–5 per repo, adapt placeholders first, prune monthly.
+A menu — install 5–8 per repo, adapt placeholders first, prune monthly.
 
 - **[Catalog & menu](catalog/frontend/README.md)**
 - **[Usage playbook](catalog/frontend/USAGE.md)** — real cases, three repo
@@ -58,6 +58,18 @@ Building: [new-page](catalog/frontend/new-page/SKILL.md) ·
 &nbsp;|&nbsp; UI stack: [theming](catalog/frontend/theming/SKILL.md) ·
 [styled-components](catalog/frontend/styled-components/SKILL.md) ·
 [antd](catalog/frontend/antd/SKILL.md)
+
+Library conventions — State & data: [tanstack-query](catalog/frontend/tanstack-query/SKILL.md) ·
+[zustand-store](catalog/frontend/zustand-store/SKILL.md) ·
+[redux-toolkit](catalog/frontend/redux-toolkit/SKILL.md)
+&nbsp;|&nbsp; Validation: [zod-schemas](catalog/frontend/zod-schemas/SKILL.md)
+&nbsp;|&nbsp; Testing: [playwright-e2e](catalog/frontend/playwright-e2e/SKILL.md) ·
+[vitest-unit](catalog/frontend/vitest-unit/SKILL.md) ·
+[jest-unit](catalog/frontend/jest-unit/SKILL.md) ·
+[testing-library-react](catalog/frontend/testing-library-react/SKILL.md)
+&nbsp;|&nbsp; Routing: [react-router-v6](catalog/frontend/react-router-v6/SKILL.md)
+&nbsp;|&nbsp; Utilities: [lodash-utils](catalog/frontend/lodash-utils/SKILL.md) ·
+[date-fns-utils](catalog/frontend/date-fns-utils/SKILL.md)
 
 ## The core ideas
 

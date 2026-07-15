@@ -1,7 +1,12 @@
 # Using the skill catalog — real cases, real repo conditions
 
-How the 17 skills behave in practice, and which subset fits which kind of
-repo. Read this before installing anything.
+How the catalog's skills behave in practice, and which subset fits which
+kind of repo. Read this before installing anything.
+
+Library skills (tanstack-query, antd, vitest-unit…) follow one extra rule:
+install ONLY for libraries the repo actually uses, at the version the repo
+actually has — and where alternatives exist (vitest/jest, zustand/redux),
+exactly one.
 
 ## How a skill actually fires
 
@@ -13,7 +18,7 @@ Two ways, both automatic once installed in `.claude/skills/`:
    form" — Claude matches the task against installed skills' descriptions and
    pulls in `new-page`, `new-data-hook`, `new-form` on its own.
 
-This is why descriptions matter and why you DON'T install all 17: every
+This is why descriptions matter and why you DON'T install all 28: every
 installed skill is a candidate on every task. Ten well-chosen skills get
 matched correctly; thirty make matching mushy.
 
